@@ -1,0 +1,48 @@
+.services-list{
+    background-size: cover;
+    background-position: center;
+    background-color: #f8f9fa;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    border-radius: 12px;
+    padding: 1.5rem;
+}
+
+#services-title {
+    display: flex;
+    justify-content: center;
+    font-family: 'Playfair Display', 'Georgia', serif;
+    font-size: 2rem;
+    color: #6c757d;
+    margin-bottom: 0.5rem;
+    padding-left: 2vh;
+    padding-top: 4vh;
+    text-align: center;
+}
+
+#services-subtitle {
+    display: flex;
+    justify-content: center;
+    font-size: 1rem;
+    color: #d97706 !important;
+    line-height: 1.7;
+    padding-left: 2vh;
+    text-align: center;
+}
+
+.chakra-stack{
+    width:fit-content;
+}
+
+@media (min-width: 992px) {
+    .services-list {
+        grid-template-columns: repeat(3, minmax(200px, 1fr));
+    }
+}
+
+.chakra-image{
+    padding-top: 1rem;
+    width: 20vw;
+    max-width: 80px;
+}

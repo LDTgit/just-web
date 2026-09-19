@@ -1,0 +1,117 @@
+body {
+    padding-top: 2rem;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.logo {
+    margin-right: auto;
+    width: 20vw;
+    max-width: 80px;
+    border: none;
+    opacity: 1;
+}
+
+nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 0;
+}
+
+.header-container {
+    display: grid;
+    max-width: -webkit-fill-available !important;
+    background-color: rgba(13, 27, 42, 0.2) !important;
+}
+
+.header-container.css-1y3k3mc {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgba(13, 27, 42, 0.7) !important;
+    backdrop-filter: blur(8px);
+}
+
+.header-content {
+    padding-left: 1em !important;
+    padding-right: 1em !important;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-links a {
+    opacity: 1;
+}
+
+.burger-btn {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 26px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 1001;
+}
+
+.burger-btn span {
+    width: 100%;
+    height: 3px;
+    background-color: #ffffff;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .burger-btn {
+        display: flex;
+    }
+
+    .burger-btn.open span:nth-child(1) {
+        transform: translateY(8.5px) rotate(45deg);
+    }
+
+    .burger-btn.open span:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-btn.open span:nth-child(3) {
+        transform: translateY(-8.5px) rotate(-45deg);
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: #0d1b2a;
+        padding: 20px 0;
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.3);
+    }
+
+    .nav-links.open {
+        display: flex;
+        justify-content: center;
+        background-color: rgba(13, 27, 42, 0.7);
+        backdrop-filter: blur(8px);
+    }
+
+    .nav-links .chakra-stack {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
